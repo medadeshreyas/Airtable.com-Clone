@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    /* background-color: rgb(51, 51, 51); */
+    height: auto;
+    background-color: #f0f6ff;
+}
+
+#first-container{
+    display: flex;
+    /* background-color: rgb(51, 51, 51); */
+    background-color: #f0f6ff;
+
+}
+#main{
+    width: 90%;
+    /* border: 1px solid yellow; */
+    padding-top: 80px;
+    display: grid;
+    margin-left: 5%;
+}
+p{
+    color: #1a3866;
+}
+#first{
+    width: 80%;
+    margin-left: 20%;
+}
+#main button{
+    background-color: #0768f8;
+    color: #ffffff;
+    font-size: 15px;
+    /* line-height: 20px; */
+    padding: 1px;
+}
+#company-logos {
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 80px;
+    /* background-color: aquamarine; */
+}
+#brands{
+    border: 1px solid green;
+    width: 45%;
+    margin: auto;
+    padding-left: 10%;
+}
+#company-logos div p{
+    width: 70%;
+    /* border: 1px solid maroon; */
+    color: #333333;
+    font-size: 20px;
+    margin: auto;
+    text-align: start;
+    padding: 20px;
+}
+#brands img{
+    border: 1px solid red;
+    width: 20%;
+    
+}
+.side{
+    color: black;
+}
+#by-section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+#second-section{
+    height: auto;
+    margin-top: 30px;
+    /* border: 1px solid yellow; */
+}
+.github{
+    height: 50px;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+}
+#video-section{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 120px;
+}
+#video-pic{
+    border: 1px solid aqua;
+    /* padding-bottom: 20px; */
+    margin-left: 210px;
+}
+#para{
+    /* border: 1px solid blue; */
+    margin-left: 100px;
+    
+}
+.heading{
+    width: 150%;
+    height: 80px;
+    color:black;
+    /* border: 1px solid blue; */
+    word-spacing: 2px;
+}
+#para h2{
+    width: 120%;
+    height: 100px;
+}
+a+p{
+    width: 47%;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+#main-airtable{
+    background-color: #f0f6ff;
+
+}
+#airtable{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 100px;
+}
+.row{
+    width: 80%;
+    /* border: 1px solid yellow; */
+    margin: auto;
+    font-size: 20px;
+    height: 200px;
+    color: #333840;
+}
+#app-images{
+    margin: auto;
+    border: 1px solid yellow;
+
+}
+#app-images img{
+   margin: auto;
+    border: 1px solid yellow;
+}
