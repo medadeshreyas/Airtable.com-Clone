@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="loginFun()">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+</html>
+<script>
+  async function loginFun() {
+    event.preventDefault();
+    let loginData = {
+      password: document.getElementById("password").value,
+      username: document.getElementById("username").value,
+    };
+    try {
+      let link = "https://masai-api-mocker.herokuapp.com/auth/login";
+      let response = await fetch(link, {
+        method: "POST",
+        body: JSON.stringify(loginData),
+        headers: { "content-type": "application/json" },
+      });
+      let data = await response.json();
+      if (data.error === true) {
+        alert("Login Successful!");
+        location.href = "/Navbar/navbar.html";
+      }
+    } catch (err) {
+      console.log("hi");
+    }
+  }
+</script>
