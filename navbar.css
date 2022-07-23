@@ -146,8 +146,8 @@ body{
   position: absolute;
   font-family: sans-serif;
   /* border: 1px solid; */
-  width: 35%;
-  top: 80px;
+  width: 40%;
+  top: 70px;
   left: 10px;
   /* list-style: none; */
   background-color: whitesmoke;
@@ -181,11 +181,6 @@ li {
 #module li:hover .drop {
   display: block;
   
-}
-#module li:hover{
-  backdrop-filter: blur(10px);
-    filter: blur(4px);
-    transition: 0.5s ease;
 }
 a {
   text-decoration: none;

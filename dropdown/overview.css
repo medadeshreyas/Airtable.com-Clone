@@ -1,0 +1,397 @@
+#container1 {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(4, 4, 117);
+}
+
+#container1>h1 {
+    color: #e0e2e6;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 70px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container1>p {
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    color: #e0e2e6;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#container1>button {
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(7, 119, 163);
+    margin-left: 40%;
+    color: white;
+}
+
+/* end of container1 */
+
+#container2 {
+    margin-top: 15px;
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+#container2 :first-child {
+    width: 45%;
+
+
+}
+
+#container2 :first-child>h2 {
+    width: 100%;
+    font-size: 48px;
+    line-height: 55px;
+    color: #181d26;
+    font-weight: 500;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container2 :first-child>p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    color: #181d26;
+    font-weight: 500;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container2 :last-child {
+    width: 45%;
+
+
+}
+
+#container2 :last-child>video {
+    width: 100%;
+}
+
+/* end container2 */
+
+#container3 {
+    width: 100%;
+    height: auto;
+    background-color: rgb(215, 211, 211);
+    display: flex;
+    gap: 15px;
+    margin-top: 45px;
+
+}
+
+#container3>:first-child {
+    width: 48%;
+    height: 80%;
+
+}
+
+#container3>:first-child>img {
+    width: 75%;
+    margin-left: 152px;
+    border-radius: 25px;
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+}
+
+
+#container3 :last-child {
+    width: 48%;
+    height: 80%;
+
+}
+
+#container3 :last-child>h3 {
+    margin-top: 75px;
+    font-size: 48px;
+    font-weight: 500;
+    margin-left: 35px;
+    line-height: 55px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container3 :last-child>p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    line-height: 45px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container3 :last-child>a {
+    margin-left: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 75px;
+}
+
+/* end of container3 */
+
+#container4 {
+    width: 100%;
+    height: 250px;
+    background-color: rgb(4, 4, 117);
+
+}
+
+#container4>h1 {
+    color: #e0e2e6;
+    font-size: 40px;
+    margin-left: 20%;
+    line-height: 48px;
+    font-weight: 500;
+    padding-top: 55px;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container4>button {
+    width: 205px;
+    height: 45px;
+    margin-left: 80%;
+    color: white;
+    background-color: rgb(7, 119, 163);
+    border: none;
+    border-radius: 28px;
+}
+
+/* end of container 4 */
+
+
+#container5 {
+    width: 100%;
+    height: auto;
+    background-color: rgb(215, 211, 211);
+    display: flex;
+    gap: 15px;
+
+
+}
+
+#container5 :first-child {
+    width: 48%;
+    height: auto;
+}
+
+#container5 :first-child>h3 {
+    margin-top: 75px;
+    font-size: 38px;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container5 :first-child>p {
+    margin-top: 75px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container5 :first-child>a {
+    margin-left: 35px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#container5 :last-child {
+    width: 45%;
+    margin-left: px;
+}
+
+#container5 :last-child>img {
+    width: 100%;
+    margin-top: 25px;
+    height: 70%;
+}
+
+/* end of container5 */
+
+#container6 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: rgb(229, 244, 249);
+}
+
+#container6 :first-child {
+    width: 50%;
+    height: auto;
+
+}
+
+#container6 :first-child>h2 {
+    margin-top: 75px;
+    font-size: 48px;
+    font-weight: 500;
+    margin-left: 85px;
+    width: 100%;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container6 :last-child {
+    width: 50%;
+    height: auto;
+
+}
+
+#container6 :last-child>p {
+    margin-top: 75px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container6 :last-child>a {
+    margin-left: 35px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* end of contaner6 */
+
+#container7 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: rgb(229, 244, 249);
+    margin-bottom: 10px;
+}
+
+#container7>div {
+    width: 13%;
+
+}
+
+#container7>div>img {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    height: 90px;
+}
+
+#container7>div>img:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* end of container7 */
+
+
+
+#container8 {
+    width: 100%;
+    height: auto;
+    background-color: rgb(217, 217, 254);
+    display: flex;
+    gap: 15px;
+
+
+}
+
+#container8>:first-child {
+    width: 48%;
+    height: 80%;
+
+}
+
+#container8>:first-child>img {
+    width: 75%;
+    margin-left: 152px;
+    border-radius: 25px;
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+}
+
+
+#container8 :last-child {
+    width: 48%;
+    height: 80%;
+
+}
+
+#container8 :last-child>h3 {
+    margin-top: 75px;
+    font-size: 48px;
+    font-weight: 500;
+    margin-left: 35px;
+    line-height: 55px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container8 :last-child>p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    line-height: 45px;
+    color: #181d26;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container8 :last-child>a {
+    margin-left: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 75px;
+}
+
+/*end of container8*/
+
+#container9 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin-bottom: -270px;
+}
+
+#container9 :first-child {
+    width: 100%;
+
+}
+* {
+    font-family: HaasText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+#container9 :last-child {
+    width: 50%;
+}
+
+#container9 :first-child>h3 {
+    font-size: 28px;
+    margin-left: 95px;
+    font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#container9 :last-child>button {
+    width: 150px;
+    margin-left: 155px;
+    margin-top: 35px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(89, 89, 242);
+    color: white;
+}

@@ -15,6 +15,9 @@ body{
     box-shadow: rgb(8, 0, 255) 0px 5px 15px;
     /* position; */
 }
+* {
+    font-family: HaasText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 .mainDiv input{
     width: 100%;
     height: 40px;
