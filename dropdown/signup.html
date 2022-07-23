@@ -4,9 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./login_signup.css">
+    <link rel="stylesheet" href="../navbar.css">
   </head>
   <body>
-    <form onsubmit="myFun()">
+    <div id="navbar"></div>
+    <form onsubmit="myFun()" class="mainDiv">
+      <h1>Sign-up Here !!!!</h1>
       <input type="text" id="name" placeholder="Enter Your Name" />
       <input type="email" id="mail" placeholder="Enter Your Email" />
       <input type="text" id="username" placeholder="Enter Username" />
@@ -16,8 +20,9 @@
     </form>
   </body>
 </html>
-
-<script>
+<script type="module">
+  import nav from "../components/navbar.js";
+    document.getElementById("navbar").innerHTML = nav;
   async function myFun() {
     event.preventDefault();
     let name = document.getElementById("name");

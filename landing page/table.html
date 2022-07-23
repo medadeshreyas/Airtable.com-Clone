@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <style>
+        .item-photo {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3 d-flex justify-content-between">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add New Items
+        </button>
+        <button type="button" class="btn btn-primary" onclick="goBack()">
+            Go to Landing page
+        </button>
+
+
+    </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Menu Item Here</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-6">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="itemName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="description">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="Price">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="btn" data-bs-dismiss="modal">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div id="foot"></div>
+
+</body>
+<script src="../footerPages/index.js" type="module"></script>
+<script>
+
+
+
+    // getting data
+
+    let getData = async () => {
+        let url = `https://api.airtable.com/v0/appJ7piYIMLjt4zdy/Menu?view=Grid view`;
+        let res = await fetch(url, {
+            method: "GET",
+            headers: { Authorization: "Bearer " + "keyM9tz8sdZjVhk8q" },
+        })
+        let data = await res.json();
+        console.log(data);
+        displayData(data.records)
+    };
+    getData()
+
+
+    // posting new data
+
+    document.querySelector("#btn").addEventListener("click", function () {
+        let MyItem = document.getElementById("itemName").value
+        let myDescription = document.getElementById("description").value
+        let myprice = document.getElementById("price").value
+
+        submitData(MyItem, myDescription, myprice)
+
+    })
+
+    async function submitData(MyItem, myDescription, myprice) {
+
+        console.log(MyItem, myDescription, typeof myprice);
+        let product = {
+            "records": [
+                {
+                    "fields": {
+                        "Item": MyItem,
+                        "Description": myDescription,
+                        "Photo": [
+                            {
+                                "url": "https://dl.airtable.com/zny1fL8DQiOaaBG2sYPn_7818.jpg?ts=1658566197&userId=usrjMXYzqdr1exdky&cs=305bb5cf9b00df73"
+                            }
+                        ],
+                        "Price": Number(myprice),
+                        "Category": "Entre"
+                    }
+                }
+            ]
+        }
+
+        product = JSON.stringify(product);
+
+        let responce = await fetch('https://api.airtable.com/v0/appJ7piYIMLjt4zdy/Menu', {
+            method: 'POST',
+            body: product,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer keyM9tz8sdZjVhk8q'
+            }
+        })
+
+        if (responce.status == 200) {
+            alert("Data added Successfully")
+            getData()
+        } else {
+            alert("Something Went wrong !")
+        }
+
+    }
+
+
+    // display data 
+
+    function displayData(data) {
+        let doc = document.querySelector("#tbody")
+        doc.innerHTML = ""
+        data.forEach((element, index) => {
+            let tr = document.createElement("tr")
+
+
+            let th = document.createElement("th")
+            th.setAttribute("scope", "row")
+            th.innerText = index + 1
+
+            let td1 = document.createElement("td")
+            td1.innerText = element.fields.Item
+            let td2 = document.createElement("td")
+            td2.innerText = element.fields.Description
+            let td3 = document.createElement("td")
+            td3.innerText = element.fields.Category
+            let td4 = document.createElement("td")
+            td4.innerText = element.fields.Price
+
+
+            let td5 = document.createElement("td")
+
+
+            let td6 = document.createElement("td")
+
+
+            let img = document.createElement("img")
+            img.setAttribute("src", element.fields.Photo[0].url)
+            img.setAttribute("class", "item-photo")
+            img.innerText = element.fields.Description
+
+            let remove = document.createElement("button")
+            remove.innerText = "Delete"
+            remove.setAttribute("class", "btn btn-outline-primary")
+            remove.addEventListener('click', () => {
+                removeData(element)
+            })
+
+            td5.append(img)
+            td6.append(remove)
+
+
+            tr.append(th, td1, td2, td3, td4, td5, td6)
+            doc.append(tr)
+
+        });
+    }
+
+
+    // delete data from table
+
+    const removeData = async (data) => {
+
+        let responce = await fetch(`https://api.airtable.com/v0/appJ7piYIMLjt4zdy/Menu/${data.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': 'Bearer keyM9tz8sdZjVhk8q'
+            }
+        })
+        let res = await responce.json()
+        console.log(res)
+        if (res) {
+            getData()
+            alert("Data deleted successfully")
+        } else {
+            alert("Something went wrong !")
+
+        }
+
+
+    }
+
+
+    function goBack() {
+
+        location.href = "./landing.html";
+    }
+
+</script>
+
+</html>

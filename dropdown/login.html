@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link rel="stylesheet" href="./login_signup.css">
   <body>
-    <form onsubmit="loginFun()">
+    <form onsubmit="loginFun()" class="mainDiv">
+      <h1>Login Here !!!!</h1>
       <input type="text" id="username" placeholder="Username" />
       <input type="password" id="password" placeholder="Password" />
       <input type="submit" id="submit" />
@@ -30,7 +32,7 @@
       let data = await response.json();
       if (data.error === true) {
         alert("Login Successful!");
-        location.href = "/Navbar/navbar.html";
+        location.href = "./landing page/landing.html";
       }
     } catch (err) {
       console.log("hi");
