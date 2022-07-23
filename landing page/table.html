@@ -23,48 +23,48 @@
     <div class="container mt-3 d-flex justify-content-between">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add New Items
-          </button>
+        </button>
         <button type="button" class="btn btn-primary" onclick="goBack()">
-        Go to Landing page
-          </button>
+            Go to Landing page
+        </button>
 
 
     </div>
     <!-- Button trigger modal -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Menu Item Here</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="col-md-6">
-                <label for="itemName" class="form-label">Item Name</label>
-                <input type="text" class="form-control" id="itemName">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Menu Item Here</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-6">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="itemName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="description">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="Price">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="btn" data-bs-dismiss="modal">ADD</button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="description" class="form-label">Description</label>
-                <input type="text" class="form-control" id="description">
-            </div>
-    
-            <div class="col-12">
-                <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" id="price" placeholder="Price">
-            </div>
-    
-           
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" id="btn" data-bs-dismiss="modal">ADD</button>
-        </div>
-      </div>
     </div>
-  </div>
-    
-    <div class="container mt-5">
+
+    <div class="container mt-5 mb-5">
         <table class="table">
             <thead>
                 <tr>
@@ -82,11 +82,13 @@
             </tbody>
         </table>
 
-        
+
     </div>
-    
+
+    <div id="foot"></div>
+
 </body>
-<script src="index.js" type="module"></script>
+<script src="../footerPages/index.js" type="module"></script>
 <script>
 
 
@@ -149,10 +151,10 @@
             }
         })
 
-        if (responce.status == 200) {           
+        if (responce.status == 200) {
             alert("Data added Successfully")
             getData()
-        }else{
+        } else {
             alert("Something Went wrong !")
         }
 
@@ -192,19 +194,19 @@
             img.setAttribute("src", element.fields.Photo[0].url)
             img.setAttribute("class", "item-photo")
             img.innerText = element.fields.Description
-            
-            let remove =  document.createElement("button")
+
+            let remove = document.createElement("button")
             remove.innerText = "Delete"
-            remove.setAttribute("class","btn btn-outline-primary")
-            remove.addEventListener('click',()=>{
+            remove.setAttribute("class", "btn btn-outline-primary")
+            remove.addEventListener('click', () => {
                 removeData(element)
             })
-            
+
             td5.append(img)
             td6.append(remove)
 
 
-            tr.append(th, td1, td2, td3, td4, td5,td6)
+            tr.append(th, td1, td2, td3, td4, td5, td6)
             doc.append(tr)
 
         });
@@ -213,7 +215,7 @@
 
     // delete data from table
 
-    const removeData = async(data)=>{
+    const removeData = async (data) => {
 
         let responce = await fetch(`https://api.airtable.com/v0/appJ7piYIMLjt4zdy/Menu/${data.id}`, {
             method: 'DELETE',
@@ -221,22 +223,22 @@
                 'Authorization': 'Bearer keyM9tz8sdZjVhk8q'
             }
         })
-         let res = await responce.json()
-         console.log(res)
-         if(res){
+        let res = await responce.json()
+        console.log(res)
+        if (res) {
             getData()
             alert("Data deleted successfully")
-         }else{
-            alert("Something went wrong !" )
+        } else {
+            alert("Something went wrong !")
 
-         }
+        }
 
 
     }
 
 
-    function goBack(){
-       
+    function goBack() {
+
         location.href = "./landing.html";
     }
 
