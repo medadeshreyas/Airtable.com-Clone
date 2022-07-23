@@ -1,4 +1,4 @@
-import nav from "/Navbar/navbar.js";
+import nav from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = nav;
 let signup = document.getElementById("signup");
 

@@ -1,3 +1,8 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -175,19 +180,13 @@ li {
 
 #module li:hover .drop {
   display: block;
+  
 }
-body::after{
-  background-color: antiquewhite;
-  position: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-filter: blur(10px);
-  -moz-filter:blur(10px);
-  filter: 
+#module li:hover{
+  backdrop-filter: blur(10px);
+    filter: blur(4px);
+    transition: 0.5s ease;
 }
-
 a {
   text-decoration: none;
   color: black;

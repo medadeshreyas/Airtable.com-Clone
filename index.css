@@ -237,15 +237,12 @@
 }
 #footer {
     width: 95%;
-        margin: auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(6, 16%);
     color: rgb(73, 73, 73);
     margin-top: 250px;
     justify-content: center;
-    
-    /* font-family: sans-serif; */
-    /* background-color: #FBF8F1; */
 }
 
 #footer p {
