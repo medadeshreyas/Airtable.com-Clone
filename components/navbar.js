@@ -1,5 +1,5 @@
- function navbar() {
-  return`<div id="box1">
+function navbar() {
+     return `<div id="box1">
             <div id="img" href="../index.html">
                 <img src="../image/airtable_logo.png" alt="error" />
                 <h2><a  href="../index.html">Airtable</a></h2>
@@ -66,7 +66,18 @@
                 </li>
                 <li><a href="">Resources ></a>
                     <div class="drop">
-                        <img src="../image/resourse12.png" alt="">
+                        <Div>
+                            <h2><a href="./dropdown/guide.html">Guide</a></h2>
+                        </Div>
+                        <Div>
+                            <h2><a href="./dropdown/article.html">Article</a></h2>
+                        </Div>
+                        <Div>
+                            <h2>Blog</h2>
+                        </Div>
+                        <Div>
+                            <h2>Support</h2>
+                        </Div>
                     </div>
                 </li>
             </ul>
@@ -139,7 +150,7 @@
 //                 <img src="../image/plus.png" alt="">
 //             </div>
 //         </div>
-    
+
 //     </div>
 //     <div id="lastLine">
 //         <span>Security</span>
@@ -151,4 +162,4 @@
 //     </div>`
 // }
 
-export default navbar()
+export default navbar();

@@ -1,0 +1,125 @@
+.img {
+     width: 100%;
+     height: 180px;
+}
+
+.top {
+     height: 180px;
+     border: none !important;
+}
+
+.card {
+     background: none !important;
+}
+
+.li-div {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: flex-start;
+     padding: 0px;
+     font-family: "Yanone Kaffeesatz", sans-serif;
+
+     margin: 0px;
+}
+
+.icon {
+     margin-right: 8px;
+}
+
+.pricing-price {
+     font-size: 70px;
+}
+
+.price-section {
+     display: flex;
+     width: 94%;
+     margin: 0px auto;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     letter-spacing: 1px;
+}
+
+.price-section > h6 {
+     width: 70%;
+     display: flex;
+     margin-left: 10px;
+}
+
+.white-bg {
+     background-color: #ffffff !important;
+}
+
+.yellow-bg {
+     background-color: #ffeab6 !important;
+}
+
+.blue-bg {
+     background-color: #c9e8f5 !important;
+}
+
+.black-bg {
+     background-color: #333333 !important;
+}
+
+.btn-border-radius {
+     border-radius: 50px;
+}
+
+.title-height {
+     height: 250px;
+}
+
+#extra-div::before {
+     content: "Most popular";
+     position: absolute;
+     top: -48px;
+     height: 50px;
+     width: 305px;
+     text-align: start;
+     padding: 10px;
+     font-weight: bold;
+     color: #ffffff;
+     background-color: #2d7ff9;
+     border-radius: 15px 15px 0 0;
+}
+
+.extra-border-bottom {
+     border-bottom: 3px solid #ccc;
+}
+
+.acco-border {
+     border: 0px !important;
+}
+
+.text-color {
+     color: #878787e8;
+}
+
+/* sticy css code */
+
+.shark-1 {
+     position: sticky;
+     top: 0;
+}
+
+.my-index-1 {
+     z-index: 1000;
+}
+
+.my-index-2 {
+     z-index: 800;
+}
+
+.my-index-3 {
+     z-index: 700;
+}
+
+.my-index-4 {
+     z-index: 500;
+}
+
+.my-index-5 {
+     z-index: 400;
+}

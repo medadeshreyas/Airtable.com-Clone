@@ -1,467 +1,1506 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- CSS only -->
-      <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-         rel="stylesheet"
-         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-         crossorigin="anonymous"
-      />
-      <!-- JavaScript Bundle with Popper -->
-      <script
-         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-         crossorigin="anonymous"
-      ></script>
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;700&display=swap"
-         rel="stylesheet"
-      />
-      <title>Document</title>
-   </head>
-   <style>
-      li {
-         font-family: "Yanone Kaffeesatz", sans-serif;
-      }
-      .img {
-         width: 100%;
-         height: 180px;
-      }
 
-      h6 {
-         text-align: center;
-      }
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;700&display=swap"
+      rel="stylesheet" />
 
-      .top {
-         height: 180px;
-         border: none !important;
-      }
+   <title>Document</title>
+</head>
+<style>
+   li {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+   }
 
-      .card {
-         background: none !important;
-      }
+   .img {
+      width: 100%;
+      height: 180px;
+   }
 
-      .li {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         justify-content: flex-start;
-         padding: 0px;
-         margin: 0px;
-      }
+   h6 {
+      text-align: center;
+   }
 
-      .icon {
-         margin-right: 8px;
-      }
+   .top {
+      height: 180px;
+      border: none !important;
+   }
 
-      .pricing-price {
-         font-size: 70px;
-      }
+   .card {
+      background: none !important;
+   }
 
-      .price-section {
-         display: flex;
-         width: 94%;
-         margin: 0px auto;
-         flex-direction: row;
-         align-items: center;
-         justify-content: space-between;
-         letter-spacing: 1px;
-      }
+   .li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0px;
+      margin: 0px;
+   }
 
-      .price-section > h6 {
-         width: 70%;
-         display: flex;
-         margin-left: 10px;
-      }
-      .white-bg {
-         background-color: #ffffff !important;
-      }
-      .yellow-bg {
-         background-color: #ffeab6 !important;
-      }
-      .blue-bg {
-         background-color: #c9e8f5 !important;
-      }
-      .black-bg {
-         background-color: #333333 !important;
-      }
+   .icon {
+      margin-right: 8px;
+   }
 
-      .card-height {
-         height: 820px;
-      }
-      .btn-border-radius {
-         border-radius: 50px;
-      }
-      .title-height {
-         height: 250px;
-      }
-   </style>
-   <link rel="stylesheet" href="../footer.css">
-   <link rel="stylesheet" href="../navbar.css">
+   .pricing-price {
+      font-size: 70px;
+   }
 
-   <body>
-      <div id="navbar"></div>
-      <div class="mt-5 mb-5">
-         <p class="h1 lh-4 p-5 m-lg-5 title-height text-center fw-bolder">
-            Choose the perfect plan <br />
-            for your team's needs
-         </p>
-         <div class="container d-flex">
-            <div class="row">
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card white-bg card-height">
-                     <div class="top flex-column align-items-start p-2">
-                        <h4 class="text-dark font-weight-light mb-2">Free</h4>
-                        <p class="font-size-sm fw-semibold h-100">
-                           For individuals or very small teams just getting
-                           started with Airtable
-                        </p>
-                     </div>
-                     <div class="py-3">
-                        <h1 class="pricing-price">Free</h1>
-                        <div class="d-flex justify-content-center p-2">
-                           <button
-                              class="btn btn-border-radius w-75 mt-5 p-lg-3 btn-outline-secondary"
-                           >
-                              Sign up
-                           </button>
-                        </div>
-                     </div>
-                     <div class="card-body">
-                        <ul class="list-unstyled font-size-sm mb-0">
-                           <li
-                              class="li align-items-center justify-content-start"
-                           >
-                              <p>Free includes:</p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Unlimited bases
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Up to 5
-                                 creators or editors
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Unlimited
-                                 commenter & read- <br />
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; only users
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>1 extension per
-                                 base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>1 sync
-                                 integration
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>1,200 records
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>2GB of
-                                 attachments per base
-                              </p>
-                           </li>
-                        </ul>
+   .price-section {
+      display: flex;
+      width: 94%;
+      margin: 0px auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 1px;
+   }
+
+   .price-section>h6 {
+      width: 70%;
+      display: flex;
+      margin-left: 10px;
+   }
+
+   .white-bg {
+      background-color: #ffffff !important;
+   }
+
+   .yellow-bg {
+      background-color: #ffeab6 !important;
+   }
+
+   .blue-bg {
+      background-color: #c9e8f5 !important;
+   }
+
+   .black-bg {
+      background-color: #333333 !important;
+   }
+
+   .card-height {
+      height: 820px;
+   }
+
+   .btn-border-radius {
+      border-radius: 50px;
+   }
+
+   .title-height {
+      height: 250px;
+   }
+</style>
+<link rel="stylesheet" href="../footer.css">
+<link rel="stylesheet" href="../navbar.css">
+<link rel="stylesheet" href="./pricing_card.css">
+
+<body>
+   <div id="navbar"></div>
+   <div class="mt-5 mb-5">
+      <p class="h1 lh-4 p-5 m-lg-5 title-height text-center fw-bolder">
+         Choose the perfect plan <br />
+         for your team's needs
+      </p>
+      <div class="container d-flex">
+         <div class="row">
+            <div class="col-sm-6 col-xl-3">
+               <div class="card white-bg card-height">
+                  <div class="top flex-column align-items-start p-2">
+                     <h4 class="text-dark font-weight-light mb-2">Free</h4>
+                     <p class="font-size-sm fw-semibold h-100">
+                        For individuals or very small teams just getting
+                        started with Airtable
+                     </p>
+                  </div>
+                  <div class="py-3">
+                     <h1 class="pricing-price">Free</h1>
+                     <div class="d-flex justify-content-center p-2">
+                        <button class="btn btn-border-radius w-75 mt-5 p-lg-3 btn-outline-secondary">
+                           Sign up
+                        </button>
                      </div>
                   </div>
-               </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card card-height yellow-bg">
-                     <div class="top flex-column align-items-start p-2">
-                        <h4 class="text-dark font-weight-light mb-2">Plus</h4>
-                        <p class="font-size-sm fw-semibold h-100">
-                           For teams looking to create a single source of truth
-                           to manage their workflows and processes
-                        </p>
-                     </div>
-                     <div class="py-4">
-                        <div class="price-section">
-                           <h1 class="pricing-price">$10</h1>
-                           <h6>
-                              per seat /month <br />
-                              billed annually
-                           </h6>
-                        </div>
-                        <h5 class="mx-3">$12 billed monthly</h5>
-                        <div class="d-flex justify-content-center p-3">
-                           <button
-                              class="btn bg-white text-dark fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary"
-                           >
-                              Try for free
-                           </button>
-                        </div>
-                     </div>
-                     <div>
-                        <ul class="list-unstyled font-size-sm mb-0">
-                           <li>
-                              <p>Everything in Free, plus:</p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>3 extensions
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>3 sync
-                                 integrations
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>5,000 records
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>5GB of
-                                 attachments per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Custom branded
-                                 forms
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>6-month
-                                 revision & snapshot history
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Automatic table
-                                 syncing
-                              </p>
-                           </li>
-                        </ul>
-                     </div>
+                  <div class="card-body">
+                     <ul class="list-unstyled font-size-sm mb-0">
+                        <li class="li align-items-center justify-content-start">
+                           <p>Free includes:</p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Unlimited bases
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Up to 5
+                              creators or editors
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Unlimited
+                              commenter & read- <br />
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; only users
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>1 extension per
+                              base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>1 sync
+                              integration
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>1,200 records
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>2GB of
+                              attachments per base
+                           </p>
+                        </li>
+                     </ul>
                   </div>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card blue-bg card-height">
-                     <div class="top flex-column align-items-start p-2">
-                        <h4 class="text-secondary font-weight-light mb-2">
-                           Pro
-                        </h4>
-                        <p class="font-size-sm h-100">
-                           For teams and companies who need to create workflows
-                           & extensions to run their most important processes
-                           across their orgs
-                        </p>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+               <div class="card card-height yellow-bg">
+                  <div class="top flex-column align-items-start p-2">
+                     <h4 class="text-dark font-weight-light mb-2">Plus</h4>
+                     <p class="font-size-sm fw-semibold h-100">
+                        For teams looking to create a single source of truth
+                        to manage their workflows and processes
+                     </p>
+                  </div>
+                  <div class="py-4">
+                     <div class="price-section">
+                        <h1 class="pricing-price">$10</h1>
+                        <h6>
+                           per seat /month <br />
+                           billed annually
+                        </h6>
                      </div>
-                     <div class="mt-3 py-4">
-                        <div class="price-section">
-                           <h1 class="pricing-price">$20</h1>
-                           <h6>
-                              per seat /month <br />
-                              billed annually
-                           </h6>
-                        </div>
-                        <h5 class="mx-3">$24 billed monthly</h5>
-                        <div class="d-flex justify-content-center p-3">
-                           <button
-                              class="btn bg-primary text-light border-0 fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary"
-                           >
-                              Try for free
-                           </button>
-                        </div>
-                     </div>
-
-                     <div class="card-body">
-                        <ul class="list-unstyled font-size-sm mb-0">
-                           <li>
-                              <p>Everything in Plus, plus:</p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>10 extensions
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>7 sync
-                                 integrations including Jira Cloud
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>50,000 records
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>20GB of
-                                 attachments per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Gantt &
-                                 Timeline Views
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>1-year revision
-                                 & snapshot history
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Personal &
-                                 locked views
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Field & table
-                                 editing permissions
-                              </p>
-                           </li>
-                        </ul>
+                     <h5 class="mx-3">$12 billed monthly</h5>
+                     <div class="d-flex justify-content-center p-3">
+                        <button
+                           class="btn bg-white text-dark fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary">
+                           Try for free
+                        </button>
                      </div>
                   </div>
+                  <div>
+                     <ul class="list-unstyled font-size-sm mb-0">
+                        <li>
+                           <p>Everything in Free, plus:</p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>3 extensions
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>3 sync
+                              integrations
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>5,000 records
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>5GB of
+                              attachments per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Custom branded
+                              forms
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>6-month
+                              revision & snapshot history
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Automatic table
+                              syncing
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
                </div>
-               <div class="col-sm-6 col-xl-3 text-light">
-                  <div class="card black-bg h-100">
-                     <div
-                        class="top card-header flex-column align-items-start p-3"
-                     >
-                        <h4 class="font-weight-light mb-2">Enterprise</h4>
-                        <p class="font-size-sm mb-0">
-                           For departments and organizations who have advanced
-                           customization, scale, security, control and support
-                           needs
-                        </p>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+               <div class="card blue-bg card-height">
+                  <div class="top flex-column align-items-start p-2">
+                     <h4 class="text-secondary font-weight-light mb-2">
+                        Pro
+                     </h4>
+                     <p class="font-size-sm h-100">
+                        For teams and companies who need to create workflows
+                        & extensions to run their most important processes
+                        across their orgs
+                     </p>
+                  </div>
+                  <div class="mt-3 py-4">
+                     <div class="price-section">
+                        <h1 class="pricing-price">$20</h1>
+                        <h6>
+                           per seat /month <br />
+                           billed annually
+                        </h6>
                      </div>
-                     <div class="py-4">
-                        <div class="price-section">
-                           <img
-                              style="width: 120px"
-                              src="https://images.vexels.com/media/users/3/134217/isolated/lists/5a480f5bf6995386a7c3c98278075e5b-star-stroke-icon-81.png"
-                              alt=""
-                           />
-                        </div>
-                        <div class="d-flex justify-content-center p-3">
-                           <button
-                              class="btn bg-white text-dark fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary"
-                           >
-                              Contact sales
-                           </button>
-                        </div>
+                     <h5 class="mx-3">$24 billed monthly</h5>
+                     <div class="d-flex justify-content-center p-3">
+                        <button
+                           class="btn bg-primary text-light border-0 fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary">
+                           Try for free
+                        </button>
                      </div>
+                  </div>
 
-                     <div class="card-body">
-                        <ul class="list-unstyled font-size-sm mb-0">
-                           <li>
-                              <p>Everything in Pro, plus::</p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Unlimited
-                                 workspaces per organization
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>
-                                 Unlimited extensions
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Salesforce &
-                                 Jira on-prem sync integrations
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>250,000 records
-                                 per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>1,000GB of
-                                 attachments per base
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>3-year revision
-                                 & snapshot history
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>SAML-based
-                                 single sign-on
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Enterprise-wide
-                                 admin panel
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Ongoing Success
-                                 Program
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Included
-                                 Professional Services
-                              </p>
-                           </li>
-                           <li>
-                              <p>
-                                 <i class="fa fa-check icon"></i>Add-On
-                                 Professional Services
-                              </p>
-                           </li>
-                        </ul>
+                  <div class="card-body">
+                     <ul class="list-unstyled font-size-sm mb-0">
+                        <li>
+                           <p>Everything in Plus, plus:</p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>10 extensions
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>7 sync
+                              integrations including Jira Cloud
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>50,000 records
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>20GB of
+                              attachments per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Gantt &
+                              Timeline Views
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>1-year revision
+                              & snapshot history
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Personal &
+                              locked views
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Field & table
+                              editing permissions
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 text-light">
+               <div class="card black-bg h-100">
+                  <div class="top card-header flex-column align-items-start p-3">
+                     <h4 class="font-weight-light mb-2">Enterprise</h4>
+                     <p class="font-size-sm mb-0">
+                        For departments and organizations who have advanced
+                        customization, scale, security, control and support
+                        needs
+                     </p>
+                  </div>
+                  <div class="py-4">
+                     <div class="price-section">
+                        <img style="width: 120px"
+                           src="https://images.vexels.com/media/users/3/134217/isolated/lists/5a480f5bf6995386a7c3c98278075e5b-star-stroke-icon-81.png"
+                           alt="" />
                      </div>
+                     <div class="d-flex justify-content-center p-3">
+                        <button
+                           class="btn bg-white text-dark fw-semibold w-75 btn-border-radius p-lg-3 btn-outline-secondary">
+                           Contact sales
+                        </button>
+                     </div>
+                  </div>
+
+                  <div class="card-body">
+                     <ul class="list-unstyled font-size-sm mb-0">
+                        <li>
+                           <p>Everything in Pro, plus::</p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Unlimited
+                              workspaces per organization
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>
+                              Unlimited extensions
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Salesforce &
+                              Jira on-prem sync integrations
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>250,000 records
+                              per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>1,000GB of
+                              attachments per base
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>3-year revision
+                              & snapshot history
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>SAML-based
+                              single sign-on
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Enterprise-wide
+                              admin panel
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Ongoing Success
+                              Program
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Included
+                              Professional Services
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <i class="fa fa-check icon"></i>Add-On
+                              Professional Services
+                           </p>
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
          </div>
       </div>
-     <div id="footer"></div>
-   </body>
+   </div>
+
+   <!-- second pricing section -->
+
+   <div class="container d-flex flex-column py-3 mb-5 justify-content-between align-items-start" style="height: 330vh">
+      <div class="container-fluid mt-0 bg-white my-index-1 item shark-1" style="height: 160px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h2 p-0 m-0">Compare our plans</p>
+            </div>
+            <div class="col-xl-2 m-1 d-flex flex-column align-items-center justify-content-evenly"
+               style="height: 160px">
+               <p class="h3">Free</p>
+               <button class="btn btn-outline-dark w-100 btn-border-radius">
+                  Sign up
+               </button>
+            </div>
+            <div class="col-xl-2 m-1 d-flex flex-column align-items-center justify-content-evenly" style="
+                        height: 160px;
+                        background-color: #ffeab6;
+                        border-radius: 25px 25px 0 0;
+                     ">
+               <p class="h3">Plus</p>
+               <button class="btn btn-outline-dark w-100 btn-border-radius">
+                  Try for free
+               </button>
+            </div>
+
+            <div
+               class="col-xl-2 m-1 d-flex flex-column align-items-center justify-content-evenly border-1 border-danger"
+               style="
+                        height: 160px;
+                        background-color: #d0f0fd;
+                        border-radius: 25px 25px 0 0;
+                     ">
+               <p class="h3">Pro</p>
+               <button class="btn btn-primary w-100 btn-border-radius">
+                  Try for free
+               </button>
+            </div>
+            <div class="col-xl-2 m-1 d-flex flex-column bg-dark text-white justify-content-evenly align-items-center"
+               style="height: 160px; border-radius: 25px 25px 0 0">
+               <p class="h3">Free</p>
+               <button class="btn btn-light w-100 btn-border-radius">
+                  Contact sales
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid bg-white my-index-2 item" style="height: 480px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Fundamentals</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Bases</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Maximum number of users</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Records per base</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Records per table</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Attachment space per base</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Revision and snapshot history</p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Rich field types including attachments, checkboxes,
+                        dropdowns, and more
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Web, desktop, iOS, and Android apps</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Realtime collaboration and commenting</p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>5</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1,200</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1,200</p>
+                  </li>
+                  <li class="li-div">
+                     <p>2GB</p>
+                  </li>
+                  <li class="li-div">
+                     <p>2-week</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 d-flex m-1 mb-0 item flex-column align-items-center justify-content-evenly" style="
+                        height: 450px;
+                        background-color: #ffeab6;
+                        padding-bottom: 20px;
+                     ">
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>5,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>5,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>5GB</p>
+                  </li>
+                  <li class="li-div">
+                     <p>6-month</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 d-flex flex-column align-items-center justify-content-evenly"
+               style="height: 450px; background-color: #d0f0fd">
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>50,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>50,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>20GB</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1-year</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+            <div
+               class="col-xl-2 m-1 mb-0 d-flex flex-column bg-dark text-white justify-content-evenly align-items-center"
+               style="height: 450px">
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>250,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>100,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1000GB</p>
+                  </li>
+                  <li class="li-div">
+                     <p>3-year</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check text-white icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check text-white icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check text-white icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid bg-white my-index-2 item" style="height: 470px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Views</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Grid, calendar, form, kanban, and gallery views</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Gantt view</p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Timeline view
+                        <span class="badge bg-secondary">NEW</span>
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Records per table</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Personal and locked views</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Sections</p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0" style="
+                        height: 450px;
+                        background-color: #ffeab6;
+                        padding-bottom: 20px;
+                     ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0" style="
+                        height: 450px;
+                        background-color: #d0f0fd;
+                        padding-bottom: 20px;
+                     ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 bg-dark text-white" style="
+                        height: 450px;
+                        background-color: #d0f0fd;
+                        padding-bottom: 20px;
+                     ">
+               <p class="h3 text-dark">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- started changes1 -->
+      <div class="container-fluid bg-white my-index-2 item" style="height: 470px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Automations</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Runs per month
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Run history
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Automation integrations
+
+                        <span class="badge bg-secondary">NEW</span>
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Premium integrations
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Personal and locked views</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Sections</p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>100</p>
+                  </li>
+                  <li class="li-div">
+                     <p>2-week</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0" style="
+                              height: 450px;
+                              background-color: #ffeab6;
+                              padding-bottom: 20px;
+                           ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>5,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>6-month</p>
+                  </li>
+                  <li class="li-div">
+                     <p class="text-light">.</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0" style="
+                              height: 450px;
+                              background-color: #d0f0fd;
+                              padding-bottom: 20px;
+                           ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>50,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1-year</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p>Jira Cloud</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 bg-dark text-white" style="
+                              height: 450px;
+                              background-color: #d0f0fd;
+                              padding-bottom: 20px;
+                           ">
+               <p class="h3 text-dark">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>500,000</p>
+                  </li>
+                  <li class="li-div">
+                     <p>3-year</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- started changes2 -->
+
+      <div class="container-fluid bg-white my-index-2 item" style="height: 280px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Sync</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Synced tables per base
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Automatic sync
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Multi-source syncing
+
+
+                        <span class="badge bg-secondary">NEW</span>
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Sync integrations
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Premium integrations
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Jira
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Salesforce
+
+                     </p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>1</p>
+                  </li>
+                  <li class="li-div">
+                     <p>1</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0" style="
+                                    height: 450px;
+                                    background-color: #ffeab6;
+                                    padding-bottom: 20px;
+                                 ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>1</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p class="text-light">.</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p>3</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0" style="
+                                    height: 450px;
+                                    background-color: #d0f0fd;
+                                    padding-bottom: 20px;
+                                 ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>10</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p>7</p>
+                  </li>
+                  <li class="li-div">
+                     <p>.</p>
+                  </li>
+
+
+                  <li class="li-div">
+                     <p>Jira Cloud</p>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 bg-dark text-white" style="
+                                    height: 450px;
+                                    background-color: #d0f0fd;
+                                    padding-bottom: 20px;
+                                 ">
+               <p class="h3 text-dark">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p>20</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p>...............</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+                  <li class="li-div">
+                     <p>.</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Jira Cloud + Server/Data Center</p>
+                  </li>
+                  <li class="li-div">
+                     <p>Unlimited</p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- started changes3 -->
+      <div class="container-fluid bg-white my-index-2 item" style="height: 300px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Customization</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Custom branded forms
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Expanded color and formatting options
+
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Advanced calendar features
+
+
+
+                        <span class="badge bg-secondary">NEW</span>
+                     </p>
+
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0" style="
+                                          height: 400px;
+                                          background-color: #ffeab6;
+                                          padding-bottom: 20px;
+                                       ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+
+                  <li class="li-div">
+                     <p>.</p>
+                  </li>
+                  <li class="li-div">
+                     <p class="text-light">.</p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p>.</p>
+                  </li>
+                  <li class="li-div">
+                     <p>.</p>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0" style="
+                                          height: 400px;
+                                          background-color: #d0f0fd;
+                                          padding-bottom: 20px;
+                                       ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 bg-dark text-white" style="
+                                          height: 400px;
+                                          background-color: #d0f0fd;
+                                          padding-bottom: 20px;
+                                       ">
+               <p class="h3 text-dark">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- started changes4 -->
+      <div class="container-fluid bg-white my-index-2 item mb-5" style="height: 300px">
+         <div class="row">
+            <div class="col-xl-3">
+               <p class="h3 p-0 m-0">Editing & Permissions</p>
+               <ul class="list-unstyled font-size-sm mt-2 mb-0">
+                  <li class="li-div">
+                     <p>Password and domain restricted shares
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>Field and table editing permissions
+
+
+
+                     </p>
+                  </li>
+                  <li class="li-div">
+                     <p>
+                        Early access to new features
+
+
+
+
+                        <span class="badge bg-secondary">NEW</span>
+                     </p>
+
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0" style="
+                                                height: 250px;
+                                                background-color: #ffeab6;
+                                                padding-bottom: 20px;
+                                             ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p class="text-light">.</p>
+                  </li>
+
+               </ul>
+            </div>
+            <div class="col-xl-2 m-1 mb-0" style="
+                                                height: 250px;
+                                                background-color: #d0f0fd;
+                                                padding-bottom: 20px;
+                                             ">
+               <p class="h3 text-white">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+
+
+               </ul>
+            </div>
+
+            <div class="col-xl-2 m-1 mb-0 bg-dark text-white" style="
+                                                height: 250px;
+                                                background-color: #d0f0fd;
+                                                padding-bottom: 20px;
+                                             ">
+               <p class="h3 text-dark">.</p>
+               <ul class="mt-2 text-center list-unstyled font-size-sm mb-0">
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+                  <li class="li-div">
+                     <p><i class="fa fa-check icon"></i></p>
+                  </li>
+
+
+               </ul>
+            </div>
+         </div>
+      </div>
+
+
+
+
+   </div>
+
+   <!-- Additional Question section -->
+
+   <div class="container col-xl-6 col-sm-6" style="height: 150px">
+      <p class="h3 text-center">Have additional questions?</p>
+      <div class="row d-flex">
+         <div class="d-flex flex-row justify-content-around align-items-center mt-3 mb-2">
+            <div class="d-flex col-xl-4 align-items-center col-sm-6 flex-column">
+               <span class="h6 text-color">BILLING / PRICING</span>
+               <p class="h5 text-primary">Billing FAQ</p>
+            </div>
+            <div class="d-flex col-xl-4 col-sm-6 align-items-center flex-column">
+               <span class="h6 text-color">SPECIAL PLANS FOR</span>
+               <p class="h5 text-primary">Nonprofits or Education</p>
+            </div>
+            <div class="d-flex col-xl-4 align-items-center col-sm-6 flex-column">
+               <span class="h6 text-color">ENTERPRISE PLANS</span>
+               <p class="h5 text-primary">Contact sales</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- FAQ code start from here -->
+
+   <div class="container w-50 mt-5 mb-5">
+      <p class="h2 text-center mt-5 mb-5">Frequently asked questions</p>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  How does Airtable's pricing work?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingOne">
+               <div class="accordion-body">
+                  Airtable plans are charged per seat. If you are on
+                  Airtable’s Free plan, you can add viewers and commenters to
+                  your workspace for free. If you are on a paid Airtable
+                  plan, you will be charged for all collaborators who have
+                  edit or comment permissions to at least one base in the
+                  workspace. No charges will apply for read-only
+                  collaborators or people submitting forms. Charges are
+                  prorated: collaborators with edit permissions added partway
+                  through the month will only be charged for the days they
+                  were collaborators.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  How does Airtable's Enterprise pricing work?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingTwo">
+               <div class="accordion-body">
+                  Upgrades to Airtable Enterprise apply per account within an
+                  organization. You will be charged for all collaborators
+                  with edit, comment, or read access to at least one base in
+                  your organization. An organization has the ability to
+                  create unlimited workspaces and bases as part of the
+                  enterprise plan. Charges are prorated: collaborators with
+                  edit, comment, or read permissions added partway through
+                  the billing cycle will only be charged for the months they
+                  were collaborators. For more information on our Enterprise
+                  plans, <a href="#">contact sales</a>.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  Is Airtable free to use?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingThree">
+               <div class="accordion-body">
+                  Airtable has multiple packages to help teams of all sizes
+                  orchestrate their work. Our Free plan is available to teams
+                  for no charge and provides the key building blocks to help
+                  you build your database. The Free plan is free forever and
+                  is formulated for small teams or those with lightweight
+                  needs. Our paid plans offer additional power and scale for
+                  teams as they grow and their needs get more complex.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFour">
+                  How much does Airtable cost?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingFour">
+               <div class="accordion-body">
+                  Our Free plan is available at no cost for teams just
+                  getting started. For teams who like the features of our
+                  Free plan but need more storage, our Plus plan is available
+                  for $10/user. Our Pro plan costs $20/user and includes the
+                  customization and team management features that fast moving
+                  teams and organizations need. Our Enterprise plan pricing
+                  is custom, based on the organization’s needs and scale with
+                  Airtable. To learn more about our Enterprise pricing,<a href="#">contact sales</a>.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive">
+                  What are my payment options?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingFive">
+               <div class="accordion-body">
+                  All payments are made via credit card for Plus and Pro
+                  workspaces. For Enterprise accounts, we can issue an annual
+                  invoice with payment via PO and/or ACH, wire, or check.
+                  Please contact sales for more information.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSix">
+                  What happens when I hit my usage limits?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingSix">
+               <div class="accordion-body">
+                  All payments are made via credit card for Plus and Pro
+                  workspaces. For Enterprise accounts, we can issue an annual
+                  invoice with payment via PO and/or ACH, wire, or check.
+                  Please <a href="#">contact sales</a> for more information.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSeven">
+                  What's an Airtable base?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingSeven">
+               <div class="accordion-body">
+                  A <a href="#">base</a> is a collection of related tables,
+                  often reflecting a single project, process, or workflow
+                  that you collaborate on with your team. For example, you
+                  could make a base to organize your sales process, with
+                  tables for sales leads, companies, and deal opportunities.
+                  Each table contains records (similar to rows in a
+                  spreadsheet), which represent the individual objects,
+                  ideas, or people that you’re tracking. You’re free to
+                  create as many bases as you’d like on any of our plans.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseEight">
+                  What is revision history?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingEight">
+               <div class="accordion-body">
+                  Airtable provides powerful ways to go back in time with
+                  record-level revision history and base snapshots. View a
+                  living history of all the changes that have been made to a
+                  single record and jump back in time and restore your base
+                  to a previous state. We provide a limited history for free
+                  plans, with extended histories for our premium plans. When
+                  you upgrade and extend your history, you’ll see the history
+                  that was previously limited by your old plan’s limits.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseNine">
+                  What are the per-base record and attachment limits?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingNine">
+               <div class="accordion-body">
+                  While we don’t limit the number of bases you can create, we
+                  do limit records and attachment space per base. On the Free
+                  plan, we limit the total number of records you can have
+                  across all tables in a base. We also limit the total amount
+                  of attachment space you can use in a base. You can increase
+                  these limits by upgrading to one of our premium plans.
+               </div>
+            </div>
+         </div>
+         <div class="accordion-item extra-border-bottom">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTen">
+                  What are sync integrations?
+               </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse"
+               aria-labelledby="panelsStayOpen-headingTen">
+               <div class="accordion-body">
+                  Sync integrations (previously known as external source
+                  sync) let you import data from external sources like Google
+                  Calendar, Zendesk, and Box into an Airtable base. Some
+                  external sources like Salesforce and Jira count as premium
+                  sync integrations and are only available as part of the Pro
+                  and Enterprise plans.
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="footer"></div>
+</body>
+
 </html>
 <script src="./price.js" type="module"></script>
