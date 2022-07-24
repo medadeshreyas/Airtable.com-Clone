@@ -5,18 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <link rel="stylesheet" href="./login_signup.css">
+  <link rel="stylesheet" href="./login_signup.css" />
   <body>
-    <form onsubmit="loginFun()" class="mainDiv">
-      <h1>Login Here !!!!</h1>
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <input type="submit" id="submit" />
-    </form>
+    <div id="main">
+      <div id="logo">
+        <div>
+          <img src="/image/loginlogo.png" alt="" />
+          <h1>Airtable</h1>
+        </div>
+      </div>
+      <div id="header">
+        <h2>Enter your Login details</h2>
+      </div>
+      <form onsubmit="loginFun()" class="mainDiv">
+        <div>
+          <h3>Username:-</h3>
+          <input type="text" id="username" placeholder="John_Smith" />
+        </div>
+        <div>
+          <h3>Password</h3>
+          <input type="password" id="password" placeholder="***********" />
+        </div>
+        <div>
+          <input type="submit" id="submit" />
+        </div>
+      </form>
+    </div>
   </body>
 </html>
 <script>
   async function loginFun() {
+    console.log("hey");
+    location.href = "/landing page/landing.html";
     event.preventDefault();
     let loginData = {
       password: document.getElementById("password").value,

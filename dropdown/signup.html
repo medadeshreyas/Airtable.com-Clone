@@ -4,25 +4,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./login_signup.css">
-    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="./login_signup.css" />
+    <link rel="stylesheet" href="../navbar.css" />
   </head>
   <body>
     <div id="navbar"></div>
-    <form onsubmit="myFun()" class="mainDiv">
-      <h1>Sign-up Here !!!!</h1>
-      <input type="text" id="name" placeholder="Enter Your Name" />
-      <input type="email" id="mail" placeholder="Enter Your Email" />
-      <input type="text" id="username" placeholder="Enter Username" />
-      <input type="password" id="pass" placeholder="Enter Password" />
+    <div id="main">
+      <div id="logo">
+        <div>
+          <img src="/image/loginlogo.png" alt="" />
+          <h1>Airtable</h1>
+        </div>
+      </div>
+      <div id="header">
+        <h2>Create your free account</h2>
+      </div>
+      <form onsubmit="myFun()" class="mainDiv">
+        <div>
+          <h3>Name:-</h3>
 
-      <input type="submit" id="submit" value="Signup" />
-    </form>
+          <input type="text" id="name" placeholder="eg: John Simon Smith" />
+        </div>
+        <div>
+          <h3>Mail ID:-</h3>
+
+          <input type="email" id="mail" placeholder="xyz@gmail.com" />
+        </div>
+        <div>
+          <h3>Username</h3>
+          <input type="text" id="username" placeholder="John_Smith" />
+        </div>
+        <div>
+          <h3>Password</h3>
+          <input type="password" id="pass" placeholder="**********" />
+        </div>
+
+        <input type="submit" id="submit" value="Signup" />
+      </form>
+    </div>
   </body>
 </html>
-<script type="module">
-  import nav from "../components/navbar.js";
-    document.getElementById("navbar").innerHTML = nav;
+<script>
+  // import nav from "../components/navbar.js";
+  // document.getElementById("navbar").innerHTML = nav;
   async function myFun() {
     event.preventDefault();
     let name = document.getElementById("name");
@@ -49,7 +73,7 @@
       console.log(signupData);
       if (signupData.error === true) {
         alert("SignUp Success");
-        location.href = "/Navbar/login.html";
+        location.href = "/dropdown/login.html";
       } else {
         alert("User Already Exists");
         name.value = "";
@@ -61,8 +85,9 @@
       console.log(signupData.error);
     } catch (error) {
       alert(error);
-      location.href = "/Navbar/login.html";
-      console.log(error);
+      location.href = "/dropdown/login.html";
+      // console.log(error);
+      // alert(error);
     }
   }
 </script>

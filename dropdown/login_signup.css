@@ -1,34 +1,66 @@
-body{
-    background-image: url(../image/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  font-family: apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-image: url(/image/signuplogo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-.mainDiv{
-    border: 1px solid;
-    width: 30%;
-    background-color:rgb(0, 255, 247);
-    border-radius: 10px;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    opacity: 0.9;
-    box-shadow: rgb(8, 0, 255) 0px 5px 15px;
-    /* position; */
+#main {
+  background-color: white;
+  width: 640px;
+  border-radius: 10px;
+  margin: auto;
+  height: 720px;
 }
-* {
-    font-family: HaasText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+#logo {
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #333333;
+  margin: auto;
+  gap: 0px;
+  margin-top: 100px;
+  border-radius: 10px 10px 0px 0px;
 }
-.mainDiv input{
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow: rgb(64, 213, 38) 0px 5px 15px;
+
+#logo > div {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
 }
-.mainDiv>h1{
-    font-family: sans-serif;
-    color: black;
+#logo > div > img {
+  background-color: transparent;
+}
+#header {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 350px;
+  width: 80%;
+  justify-content: space-evenly;
+}
+form > div {
+  height: fit-content;
+}
+form > div > input {
+  width: 100%;
+  font-size: 18px;
+}
+#submit {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #4285f4;
+  color: white;
 }
