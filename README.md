@@ -20,7 +20,7 @@ Authentication feature and Admin Dashboard | API & Database Models
 
 
 ###  [ Go Live ->](https://stellar-concha-5c9a19.netlify.app/)
-![aitable](https://user-images.githubusercontent.com/106005502/192762765-855a4405-ab6e-47a7-b1c9-c6fecd10dd50.png)
+
 
 
 
